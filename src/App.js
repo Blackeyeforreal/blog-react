@@ -1,24 +1,131 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import Wall from './components/wall'
+import Createposts from './components/Createposts'
+import {useState } from 'react'
+import Sidepanel from './components/Sidepanel'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-function App() {
+  
+
+
+
+
+const App = () => {
+  
+const [Posts, setPosts] = useState(
+[
+    {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    },
+    {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 6th at 1:30pm",
+      "reminder": true
+    },
+    {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    }, {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    }, {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    }, {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    }, {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    }, {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    },
+    {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    }, {
+      "heading":" dooba dooba dobaa ",
+      "content": "parrry the platipus",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    }
+  ]
+  )
+
+  const posttheblog = (props) =>{
+    const newpost = {
+     heading : props.heading, 
+      content : props.content,
+    }
+   setPosts( [...Posts , newpost]
+   )
+
+   console.log(Posts)
+
+}
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <Router>    
+    <div className ='h-full' >
+
+      <Sidepanel />
+     <Header title = "hello" />
+
+
+       <switch>
+          <Route
+          exact
+           path = '/wall'
+          
+           >   <Wall Posts ={Posts} />
+             </Route>
+
+           <Route 
+           exact
+           path= '/posts'
+         
+           ><Createposts posttheblog = {posttheblog} />
+             
+             </Route>
+         
+
+
+
+       </switch>
+  
+
+     
+  
+
+
+ 
+
+
     </div>
+  </Router>    
+    
   );
 }
 
