@@ -1,3 +1,14 @@
+# Important note
+
+No module is Attached.
+
+Please Make sure that you are connected to internet at the time of execution 
+
+Run the django server  https://github.com/Blackeyeforreal/Reactserver first before running the front-end 
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
