@@ -1,5 +1,7 @@
 # Important note
 
+the following Project is made using Tailwind and React
+
 No module is Attached.
 
 Please Make sure that you are connected to internet at the time of execution 
