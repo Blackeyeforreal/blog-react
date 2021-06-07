@@ -11,18 +11,71 @@ module.exports = {
               'footer': '200px minmax(900px, 1fr) 100px',
               },
               gridAutoRows: {
-                'cardauto': 'minmax(60%, 2fr)',
+                'cardauto': 'minmax(275px, 275px)',
               },
+              minHeight: {
+
+                '0': '0',
+                '1/4': '25%',
+                '1/2': '50%',
+                '3/4': '75%',
+                'full': '100%',
+                'card' : '100px',
+              },
+              
 
             
-            minWidth: {
-              '0': '0',
-              '1/4': '25%',
-              '1/2': '50%',
-              '3/4': '75%',
-              'full': '100%',
-              'card' : '100px',
-            }
+              maxWidth: {
+
+                '0': '0',
+                '1/4': '25%',
+                '1/2': '50%',
+                '3/4': '75%',
+                'full': '100%',
+                'card' : '200px',
+              },
+
+              maxHeight: {
+
+                '0': '0',
+                '1/4': '25%',
+                '1/2': '50%',
+                '3/4': '75%',
+                'full': '100%',
+                'card' : '270px',
+              },
+              
+
+            
+              minWidth: {
+
+                '0': '0',
+                '1/4': '25%',
+                '1/2': '50%',
+                '3/4': '75%',
+                'full': '100%',
+                'card' : '75px',
+              },
+            
+              backgroundImage: theme => ({
+                'jon': "url('https://pyxis.nymag.com/v1/imgs/bae/9eb/664ad57e704e648661d28a4590b0b176a4-12-jon-snow.2x.rsquare.w536.jpg')",
+               
+               }),
+               backgroundColor: theme => ({
+                ...theme('colors'),
+                'primary': '#3490dc',
+                'secondary': '#ffed4a',
+              'danger': 'rgb(19, 40, 44)'  ,
+               }),
+
+               fontFamily: {
+
+       'title': 'Pacifico, cursive',
+       'norm':  'Noto Sans, sans-serif',
+              'about': 'Amatic SC, cursive',
+              'about2': 'Mali, cursive'
+      
+               }
 
     }
   },

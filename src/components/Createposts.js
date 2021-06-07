@@ -6,6 +6,7 @@ const Createposts = ({posttheblog}) => {
 
 const [heading, setheading] = useState('')
 const [content, setcontent] = useState('')
+const [summary, setsum] = useState('')
 
 const onSubmit = (e) => {
    e.preventDefault()
@@ -15,7 +16,7 @@ const onSubmit = (e) => {
         return
     }
 
-    posttheblog({heading, content})
+    posttheblog({heading, content,summary})
 
     
 
@@ -26,26 +27,42 @@ const onSubmit = (e) => {
 
     return (
        
-           <form onSubmit = {onSubmit}>
-               <div>
-                      <label for="fname">First name:</label>
+           <form className= "h-full flex flex-col items-center mb-0 " onSubmit = {onSubmit}>
+               <h1 className = ' border-b-4  text-6xl py-16'> What is on Your Mind?</h1>
+               <div className =' pt-16'>
+                      <label for="fname" className = " text-2xl">Title</label>
                 </div>
-                <div>
+                <div className = " mb-8">
                     <input 
                             type="text"
                             id="fname"
                             name="fname"
                             value = {heading} 
                             onChange ={(e) => setheading(e.target.value)}   
+                             
+                        />
+                </div>
+                <div className = " mb-8">
+                    <label className = "  text-2xl" for="lname">Summary</label>
+                </div>
+                <div className = " mb-8">
+                    <textarea 
+                            type="text"
+                            id="fname"
+                            className =' w-full'
+                            name="Under 200 words"
+                            value = {summary} 
+                            onChange ={(e) => setsum(e.target.value)}   
+                             
                         />
                 </div>
                 
-                <div>
-                    <label for="lname">Last name:</label>
+                <div className = " mb-8">
+                    <label className = "  text-2xl" for="lname">Content</label>
                 </div>
-                <input type="text" id="lname" name="lname" value = { content}  onChange= {(e) => setcontent(e.target.value)} />
+                <textarea className=" w-3/4  min-h-full max-h-max  " type="text" id="lname" name="lname" value = { content}  onChange= {(e) => setcontent(e.target.value)} />
                 
-      <input type='submit' value='Save Task' className='btn btn-block' />
+      <input type="submit" value='Post' className='post pt-8 hover:bg-red-700 ' />
             </form>
         
     )

@@ -5,4 +5,6 @@
 
 html, body, #root, .App {
     height: 100%;
+    color:rgb(19, 40, 44) ;
+    font-family: 'Noto Sans', sans-serif ;
   }

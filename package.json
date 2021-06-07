@@ -2,6 +2,7 @@
   "name": "blog-react",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://192.168.43.4:8000/",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@testing-library/jest-dom": "^5.12.0",
@@ -9,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
@@ -42,4 +44,5 @@
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
   }
+  
 }
